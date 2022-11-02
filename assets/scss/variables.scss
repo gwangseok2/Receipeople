@@ -1,0 +1,11 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+
+// 반응형 mixin 제작
+$cm-tablet-size: 1280px;
+$cm-phone-size: 420px;
+
+// scss 변수 모음 어디에서나 사용 가능
+$main-font: 'Noto Sans KR', sans-serif;

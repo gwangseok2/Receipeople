@@ -1,0 +1,74 @@
+/* ========================================= mixin모음 ================================  */
+
+@mixin position(
+    $type,
+    $top: unset,
+    $right: unset,
+    $bottom: unset,
+    $left: unset
+) {
+    position: $type;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin flexBoxCenter($type: flex-start) {
+    display: flex;
+    align-items: center;
+    justify-content: $type;
+}
+
+@mixin fontSize($type) {
+    font-size: $type + px;
+
+    @include phone {
+        font-size: ($type / 420) * 100 + vw !important;
+    }
+}
+
+@mixin sentenceHidden($line) {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+@mixin floatBtn($type) {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: #000;
+    z-index: 100001;
+    color: #fff;
+    text-align: center;
+    @if ($type == 'web') {
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-top: 1px solid #ccc;
+    }
+    button {
+        position: relative;
+        @include flexBoxCenter(center);
+        width: 89.33%;
+        margin: 0 auto;
+    }
+}
+
+// 1280px
+@mixin tablet {
+    @media screen and (max-width: $cm-tablet-size) {
+        @content;
+    }
+}
+
+// 420px
+@mixin phone {
+    @media screen and (max-width: $cm-phone-size) {
+        @content;
+    }
+}
