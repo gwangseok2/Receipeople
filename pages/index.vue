@@ -1,6 +1,10 @@
 <template>
   <div class="sign-up">
     <h1 class="title">회원 가입 페이지</h1>
+    <figure class="sign-up-main-login-img">
+      빰빰티비<br />
+      Receipeople에 오신 것을 환영합니다.
+    </figure>
     <div class="flex-wrapper">
       <button class="app-login-btn kakao">카카오 로그인</button>
       <button class="app-login-btn google">구글 로그인</button>
@@ -19,8 +23,34 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sign-up {
+  max-width: 717px;
+  margin: 0 auto;
   background-color: #fafafa;
   min-height: 100vh;
+  &-main-login-img {
+    width: 89.33%;
+    height: 300px;
+    border-radius: 12px;
+    background-color: lightgreen;
+    border: 1px solid red;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    word-break: keep-all;
+    animation: fade 2.5s infinite;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .title {
     text-align: center;
     padding: 40px 0;
