@@ -1,10 +1,7 @@
 <template>
   <div class="sign-up">
     <h1 class="title">Receipeople</h1>
-    <figure class="sign-up-main-login-img">
-      회원가입<br />
-      Receipeople에 오신 것을 환영합니다.
-    </figure>
+    <figure class="sign-up-main-login-img"></figure>
     <div class="flex-wrapper">
       <div>
         <button class="app-login-btn kakao">카카오 로그인</button>
@@ -37,24 +34,20 @@ export default {
     width: 89.33%;
     height: 300px;
     border-radius: 12px;
-    background-color: lightgreen;
-    border: 1px solid red;
+    border: 3px solid #000;
     margin: 20px auto;
     text-align: center;
-    padding: 20px;
-    font-size: 40px;
-    font-weight: bold;
+    background: #fff;
+    background-image: url('@/assets/img/gif/comeon.gif');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     color: #000;
     word-break: keep-all;
-    animation: fade 2.5s infinite;
-  }
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      background-color: #fff;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
