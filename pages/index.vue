@@ -81,6 +81,10 @@ export default {
     border-radius: 8px;
     opacity: 0;
   }
+  .app-login-btn:active {
+    transition: all 1;
+    transform: scale(1.05);
+  }
   .app-login-btn.kakao {
     animation: moving 1s forwards;
   }
