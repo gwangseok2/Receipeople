@@ -1,14 +1,20 @@
 <template>
   <div class="sign-up">
-    <h1 class="title">회원 가입 페이지</h1>
+    <h1 class="title">Receipeople</h1>
     <figure class="sign-up-main-login-img">
-      빰빰티비<br />
+      회원가입<br />
       Receipeople에 오신 것을 환영합니다.
     </figure>
     <div class="flex-wrapper">
-      <button class="app-login-btn kakao">카카오 로그인</button>
-      <button class="app-login-btn google">구글 로그인</button>
-      <button class="app-login-btn apple">애플 로그인</button>
+      <div>
+        <button class="app-login-btn kakao">카카오 로그인</button>
+      </div>
+      <div>
+        <button class="app-login-btn google">구글 로그인</button>
+      </div>
+      <div>
+        <button class="app-login-btn apple">애플 로그인</button>
+      </div>
     </div>
     <div>
       <p class="other-login-btn">다른 방법으로 로그인</p>
@@ -48,6 +54,7 @@ export default {
     }
     100% {
       opacity: 1;
+      background-color: #fff;
     }
   }
 
@@ -58,6 +65,9 @@ export default {
   .flex-wrapper {
     @include flexBoxCenter(center);
     flex-wrap: wrap;
+    div {
+      width: 100%;
+    }
   }
   .app-login-btn {
     width: 89.33%;
@@ -69,6 +79,25 @@ export default {
     font-weight: bold;
     margin-bottom: 10px;
     border-radius: 8px;
+    opacity: 0;
+  }
+  .app-login-btn.kakao {
+    animation: moving 1s forwards;
+  }
+  .app-login-btn.google {
+    animation: moving 1.5s forwards;
+  }
+  .app-login-btn.apple {
+    animation: moving 2s forwards;
+  }
+  @keyframes moving {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 89.33%;
+      opacity: 1;
+    }
   }
   div {
     text-align: center;
